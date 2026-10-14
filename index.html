@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio of Kunal Kishor Patil, an AIML Engineer based in Shirpur specializing in Machine Learning, Deep Learning, NLP, and intelligent AI systems.">
+  <title>Kunal Kishor Patil | AIML Engineer</title>
+
+  <!-- Google Fonts: Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#eef2ff',
+              100: '#e0e7ff',
+              500: '#6366f1',
+              600: '#4f46e5',
+              700: '#4338ca',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-slate-50 text-slate-800 dark:bg-slate-950 dark:text-slate-100 transition-colors duration-300 min-h-screen flex flex-col selection:bg-indigo-500 selection:text-white">
+
+  <!-- Background decorative glows -->
+  <div class="fixed top-0 left-1/4 w-96 h-96 bg-indigo-500/10 dark:bg-indigo-600/15 rounded-full blur-3xl pointer-events-none -z-10"></div>
+  <div class="fixed top-1/3 right-10 w-96 h-96 bg-cyan-500/10 dark:bg-cyan-600/15 rounded-full blur-3xl pointer-events-none -z-10"></div>
+  <div class="fixed bottom-10 left-1/3 w-96 h-96 bg-purple-500/10 dark:bg-purple-600/10 rounded-full blur-3xl pointer-events-none -z-10"></div>
+
+  <!-- Navigation Bar -->
+  <header id="main-nav" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 glass-nav">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 sm:h-20">
+        <!-- Logo -->
+        <a href="#hero" class="flex items-center gap-2 group">
+          <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-indigo-600 to-cyan-500 flex items-center justify-center text-white font-bold text-lg shadow-md group-hover:scale-105 transition-transform">
+            KP
+          </div>
+          <div class="flex flex-col">
+            <span class="font-bold text-slate-900 dark:text-white text-base tracking-tight leading-tight">Kunal Patil</span>
+            <span class="text-xs text-slate-500 dark:text-slate-400 font-medium">AIML Engineer</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden md:flex items-center gap-1 lg:gap-2">
+          <a href="#about" class="nav-link px-3 py-2 rounded-lg text-sm font-medium text-slate-600 hover:text-indigo-600 dark:text-slate-300 dark:hover:text-indigo-400 transition-colors">About</a>
+          <a href="#skills" class="nav-link px-3 py-2 rounded-lg text-sm font-medium text-slate-600 hover:text-indigo-600 dark:text-slate-300 dark:hover:text-indigo-400 transition-colors">Skills</a>
+          <a href="#projects" class="nav-link px-3 py-2 rounded-lg text-sm font-medium text-slate-600 hover:text-indigo-600 dark:text-slate-300 dark:hover:text-indigo-400 transition-colors">Projects</a>
+          <a href="#experience" class="nav-link px-3 py-2 rounded-lg text-sm font-medium text-slate-600 hover:text-indigo-600 dark:text-slate-300 dark:hover:text-indigo-400 transition-colors">Experience</a>
+          <a href="#contact" class="nav-link px-3 py-2 rounded-lg text-sm font-medium text-slate-600 hover:text-indigo-600 dark:text-slate-300 dark:hover:text-indigo-400 transition-colors">Contact</a>
+        </nav>
+
+        <!-- Right Side CTA & Theme Toggle -->
+        <div class="flex items-center gap-3">
+          <!-- Theme Toggle Button -->
+          <button id="theme-toggle" type="button" aria-label="Toggle Dark Mode" class="p-2.5 rounded-xl text-slate-500 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white bg-slate-100 dark:bg-slate-800/80 hover:bg-slate-200 dark:hover:bg-slate-700/80 transition-colors">
+            <!-- Sun Icon -->
+            <svg class="theme-icon-sun hidden w-5 h-5 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 9h-1m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+            </svg>
+            <!-- Moon Icon -->
+            <svg class="theme-icon-moon hidden w-5 h-5 text-indigo-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+            </svg>
+          </button>
+
+          <!-- Primary Contact CTA -->
+          <a href="#contact" class="hidden sm:inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-medium text-sm shadow-sm transition-all hover:shadow hover:shadow-indigo-500/20 active:scale-95">
+            <span>Hire Me</span>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+          </a>
+
+          <!-- Mobile Hamburger Menu Button -->
+          <button id="nav-toggle" type="button" aria-label="Toggle navigation menu" class="md:hidden p-2.5 rounded-xl text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-menu" class="hidden md:hidden border-b border-slate-200 dark:border-slate-800 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md px-4 pt-3 pb-5 space-y-1">
+      <a href="#about" class="block px-3 py-2 rounded-lg text-base font-medium text-slate-700 dark:text-slate-200 hover:bg-indigo-50 dark:hover:bg-slate-800 hover:text-indigo-600 dark:hover:text-indigo-400">About</a>
+      <a href="#skills" class="block px-3 py-2 rounded-lg text-base font-medium text-slate-700 dark:text-slate-200 hover:bg-indigo-50 dark:hover:bg-slate-800 hover:text-indigo-600 dark:hover:text-indigo-400">Skills</a>
+      <a href="#projects" class="block px-3 py-2 rounded-lg text-base font-medium text-slate-700 dark:text-slate-200 hover:bg-indigo-50 dark:hover:bg-slate-800 hover:text-indigo-600 dark:hover:text-indigo-400">Projects</a>
+      <a href="#experience" class="block px-3 py-2 rounded-lg text-base font-medium text-slate-700 dark:text-slate-200 hover:bg-indigo-50 dark:hover:bg-slate-800 hover:text-indigo-600 dark:hover:text-indigo-400">Experience</a>
+      <a href="#contact" class="block px-3 py-2 rounded-lg text-base font-medium text-slate-700 dark:text-slate-200 hover:bg-indigo-50 dark:hover:bg-slate-800 hover:text-indigo-600 dark:hover:text-indigo-400">Contact</a>
+      <div class="pt-2 border-t border-slate-200 dark:border-slate-800 flex items-center justify-between">
+        <span class="text-sm text-slate-500 dark:text-slate-400">Theme</span>
+        <button id="theme-toggle-mobile" class="px-3 py-1.5 text-xs font-medium rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">Toggle Mode</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="flex-grow pt-20">
+    <!-- Hero Section -->
+    <section id="hero" class="relative min-h-[calc(100vh-5rem)] flex items-center py-12 lg:py-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          
+          <!-- Hero Text -->
+          <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+            <!-- Availability Badge -->
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-200 dark:border-emerald-800/60 text-emerald-700 dark:text-emerald-300 text-xs sm:text-sm font-medium">
+              <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 ping-dot"></span>
+              <span>Available for AIML &amp; Software Roles</span>
+            </div>
+
+            <!-- Main Heading -->
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 dark:text-white leading-[1.15]">
+              Hi, I'm <span class="gradient-text">Kunal Kishor Patil</span>
+              <br>
+              <span class="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-700 dark:text-slate-300 block mt-2">
+                I build intelligent solutions as an <br class="hidden sm:inline">
+                <span id="typewriter-text" class="text-indigo-600 dark:text-cyan-400 border-r-2 border-indigo-600 dark:border-cyan-400 pr-1"></span>
+              </span>
+            </h1>
+
+            <!-- Bio Paragraph -->
+            <p class="text-base sm:text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+              AIML Engineer based in Shirpur, passionate about designing neural architectures, natural language processing systems, and scalable computer vision models that solve real-world problems.
+            </p>
+
+            <!-- Action Buttons -->
+            <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-2">
+              <a href="#projects" class="px-6 py-3.5 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-semibold text-sm shadow-lg shadow-indigo-600/25 transition-all hover:-translate-y-0.5">
+                Explore Featured Projects
+              </a>
+              <a href="#contact" class="px-6 py-3.5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-800 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-800/60 font-semibold text-sm shadow-sm transition-all hover:-translate-y-0.5">
+                Get In Touch
+              </a>
+              <a href="assets/resume-placeholder.pdf" target="_blank" class="inline-flex items-center gap-2 px-5 py-3.5 rounded-xl text-slate-600 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400 text-sm font-medium transition-colors">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+                <span>Resume / CV</span>
+              </a>
+            </div>
+
+            <!-- Social Links Strip -->
+            <div class="flex items-center justify-center lg:justify-start gap-5 pt-4 text-slate-400 dark:text-slate-500">
+              <a href="https://github.com/patilkunal2910" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile" class="hover:text-slate-900 dark:hover:text-white transition-colors">
+                <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+                  <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                </svg>
+              </a>
+              <a href="https://linkedin.com/in/xyz" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile" class="hover:text-slate-900 dark:hover:text-white transition-colors">
+                <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+                  <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.761-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                </svg>
+              </a>
+              <a href="https://twitter.com/marco" target="_blank" rel="noopener noreferrer" aria-label="Twitter / X Profile" class="hover:text-slate-900 dark:hover:text-white transition-colors">
+                <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                </svg>
+              </a>
+              <a href="mailto:patilkunal29107@gmail.com" aria-label="Email Address" class="hover:text-slate-900 dark:hover:text-white transition-colors">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Hero Visual / Avatar Card -->
+          <div class="lg:col-span-5 flex justify-center">
+            <div class="relative w-72 h-72 sm:w-80 sm:h-80 lg:w-96 lg:h-96">
+              <!-- Animated gradient outer circle -->
+              <div class="absolute inset-0 rounded-3xl bg-gradient-to-tr from-indigo-500 via-purple-500 to-cyan-400 rotate-6 opacity-30 dark:opacity-40 filter blur-xl"></div>
+              
+              <div class="relative w-full h-full rounded-3xl border-2 border-slate-200/80 dark:border-slate-800 bg-white dark:bg-slate-900 overflow-hidden shadow-2xl flex flex-col items-center justify-center p-8 text-center group">
+                <!-- Avatar Graphic -->
+                <div class="w-32 h-32 sm:w-40 sm:h-40 rounded-full bg-gradient-to-tr from-indigo-500 to-cyan-400 p-1 mb-4 shadow-lg overflow-hidden flex items-center justify-center">
+                  <img src="assets/profile.jpg" onerror="this.onerror=null; this.src='assets/profile.png'; this.onerror=()=>this.src='assets/avatar.svg';" alt="Kunal Kishor Patil" class="w-full h-full object-cover rounded-full bg-slate-100 dark:bg-slate-800">
+                </div>
+                <h3 class="font-bold text-lg text-slate-900 dark:text-white">Kunal Kishor Patil</h3>
+                <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Shirpur, Maharashtra, India</p>
+
+                <!-- Micro quick badge -->
+                <div class="mt-4 px-3 py-1 rounded-full bg-indigo-50 dark:bg-indigo-950/60 border border-indigo-200 dark:border-indigo-800 text-xs text-indigo-600 dark:text-indigo-400 font-medium">
+                  AIML &amp; Deep Learning Focus
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="py-20 bg-white/50 dark:bg-slate-900/40 border-y border-slate-200/60 dark:border-slate-800/60">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Section Header -->
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <h2 class="text-xs sm:text-sm font-bold tracking-widest uppercase text-indigo-600 dark:text-cyan-400">About Me</h2>
+          <p class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white mt-2">Crafting intelligent systems through Machine Learning &amp; Deep Learning</p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          <!-- Text Story -->
+          <div class="lg:col-span-7 space-y-5 text-slate-600 dark:text-slate-300 leading-relaxed text-base sm:text-lg">
+            <p>
+              I am an AIML Engineer based in Shirpur with a passion for designing and deploying intelligent, data-driven systems. I focus on developing neural network architectures, computer vision systems, and natural language processing pipelines that turn complex datasets into real-world solutions.
+            </p>
+            <p>
+              My expertise spans the end-to-end Machine Learning lifecycle—from data exploration, preprocessing, and feature engineering to training deep learning models, hyperparameter optimization, and containerizing production APIs with FastAPI and Docker.
+            </p>
+            <p>
+              I am especially enthusiastic about the rapid evolution of Generative AI, Large Language Models (LLMs), and retrieval-augmented generation (RAG), bringing together rigorous algorithmic thinking and modern software engineering.
+            </p>
+
+            <div class="pt-4 grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div class="flex items-start gap-3">
+                <div class="p-2 rounded-lg bg-indigo-100 dark:bg-indigo-950/70 text-indigo-600 dark:text-indigo-400">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  </svg>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-slate-900 dark:text-white text-sm">Deep Learning &amp; Neural Nets</h4>
+                  <p class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">PyTorch, TensorFlow, CNNs &amp; Transformers</p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3">
+                <div class="p-2 rounded-lg bg-cyan-100 dark:bg-cyan-950/70 text-cyan-600 dark:text-cyan-400">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                  </svg>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-slate-900 dark:text-white text-sm">End-to-End MLOps &amp; APIs</h4>
+                  <p class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">FastAPI, Docker &amp; high-throughput model serving</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Key Metrics Grid -->
+          <div class="lg:col-span-5 grid grid-cols-2 gap-4 sm:gap-6">
+            <div class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm text-center">
+              <span class="block text-4xl sm:text-5xl font-extrabold text-indigo-600 dark:text-indigo-400">15+</span>
+              <span class="block text-xs sm:text-sm font-medium text-slate-500 dark:text-slate-400 mt-2">AI / ML Projects</span>
+            </div>
+            <div class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm text-center">
+              <span class="block text-4xl sm:text-5xl font-extrabold text-cyan-600 dark:text-cyan-400">95%+</span>
+              <span class="block text-xs sm:text-sm font-medium text-slate-500 dark:text-slate-400 mt-2">Model Accuracy &amp; Eval</span>
+            </div>
+            <div class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm text-center">
+              <span class="block text-4xl sm:text-5xl font-extrabold text-emerald-600 dark:text-emerald-400">10k+</span>
+              <span class="block text-xs sm:text-sm font-medium text-slate-500 dark:text-slate-400 mt-2">Data Samples Trained</span>
+            </div>
+            <div class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm text-center">
+              <span class="block text-4xl sm:text-5xl font-extrabold text-purple-600 dark:text-purple-400">100%</span>
+              <span class="block text-xs sm:text-sm font-medium text-slate-500 dark:text-slate-400 mt-2">Code &amp; Data Integrity</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills & Technologies Section -->
+    <section id="skills" class="py-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Section Header -->
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <h2 class="text-xs sm:text-sm font-bold tracking-widest uppercase text-indigo-600 dark:text-cyan-400">Tech Stack &amp; Skills</h2>
+          <p class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white mt-2">Tools &amp; Frameworks for Artificial Intelligence</p>
+        </div>
+
+        <!-- Skills Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          
+          <!-- Category 1: ML & Deep Learning -->
+          <div class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm hover:border-indigo-500/50 transition-colors">
+            <div class="w-12 h-12 rounded-xl bg-indigo-50 dark:bg-indigo-950/60 text-indigo-600 dark:text-indigo-400 flex items-center justify-center mb-4">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+            </div>
+            <h3 class="font-bold text-lg text-slate-900 dark:text-white mb-3">ML &amp; Deep Learning</h3>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-2.5 py-1 text-xs rounded-md font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">PyTorch</span>
+              <span class="px-2.5 py-1 text-xs rounded-md font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">TensorFlow</span>
+              <span class="px-2.5 py-1 text-xs rounded-md font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">Scikit-Learn</span>
+              <span class="px-2.5 py-1 text-xs rounded-md font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">Keras</span>
+              <span class="px-2.5 py-1 text-xs rounded-md font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">CNNs / RNNs</span>
+              <span class="px-2.5 py-1 text-xs rounded-md font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">Transformers</span>
+            </div>
+          </div>
+
+          <!-- Category 2: NLP & Vision -->
+          <div class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm hover:border-cyan-500/50 transition-colors">
+            <div class="w-12 h-12 rounded-xl bg-cyan-50 dark:bg-cyan-950/60 text-cyan-600 dark:text-cyan-400 flex items-center justify-center mb-4">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+              </svg>
+            </div>
+            <h3 class="font-bold text-lg text-slate-900 dark:text-white mb-3">NLP &amp; Computer Vision</h3>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-2.5 py-1 text-xs rounded-md font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">OpenCV</span>
+              <span class="px-2.5 py-1 text-xs rounded-md font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">YOLOv8</span>
+              <span class="px-2.5 py-1 text-xs rounded-md font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">Hugging Face</span>
+              <span class="px-2.5 py-1 text-xs rounded-md font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">LangChain</span>
+              <span class="px-2.5 py-1 text-xs rounded-md font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">Vector Search</span>
+              <span class="px-2.5 py-1 text-xs rounded-md font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">SpaCy</span>
+            </div>
+          </div>
+
+          <!-- Category 3: Backend & Model Serving -->
+          <div class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm hover:border-emerald-500/50 transition-colors">
+            <div class="w-12 h-12 rounded-xl bg-emerald-50 dark:bg-emerald-950/60 text-emerald-600 dark:text-emerald-400 flex items-center justify-center mb-4">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01" />
+              </svg>
+            </div>
+            <h3 class="font-bold text-lg text-slate-900 dark:text-white mb-3">Backend &amp; Model APIs</h3>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-2.5 py-1 text-xs rounded-md font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">Python</span>
+              <span class="px-2.5 py-1 text-xs rounded-md font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">FastAPI</span>
+              <span class="px-2.5 py-1 text-xs rounded-md font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">Flask</span>
+              <span class="px-2.5 py-1 text-xs rounded-md font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">Docker</span>
+              <span class="px-2.5 py-1 text-xs rounded-md font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">RESTful APIs</span>
+              <span class="px-2.5 py-1 text-xs rounded-md font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">Streamlit</span>
+            </div>
+          </div>
+
+          <!-- Category 4: Data Engineering & Tools -->
+          <div class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm hover:border-purple-500/50 transition-colors">
+            <div class="w-12 h-12 rounded-xl bg-purple-50 dark:bg-purple-950/60 text-purple-600 dark:text-purple-400 flex items-center justify-center mb-4">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4" />
+              </svg>
+            </div>
+            <h3 class="font-bold text-lg text-slate-900 dark:text-white mb-3">Data &amp; DevOps</h3>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-2.5 py-1 text-xs rounded-md font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">Pandas &amp; NumPy</span>
+              <span class="px-2.5 py-1 text-xs rounded-md font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">PostgreSQL</span>
+              <span class="px-2.5 py-1 text-xs rounded-md font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">MongoDB</span>
+              <span class="px-2.5 py-1 text-xs rounded-md font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">Git &amp; GitHub</span>
+              <span class="px-2.5 py-1 text-xs rounded-md font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">MLflow</span>
+              <span class="px-2.5 py-1 text-xs rounded-md font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">Linux / Bash</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Projects Section -->
+    <section id="projects" class="py-20 bg-slate-100/60 dark:bg-slate-900/60 border-y border-slate-200/60 dark:border-slate-800/60">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Section Header -->
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+          <div>
+            <h2 class="text-xs sm:text-sm font-bold tracking-widest uppercase text-indigo-600 dark:text-cyan-400">Portfolio</h2>
+            <p class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white mt-2">Featured Projects</p>
+          </div>
+
+          <!-- Filter Tabs -->
+          <div class="flex flex-wrap items-center gap-2">
+            <button data-filter="all" class="project-filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all bg-indigo-600 text-white shadow-sm">All Work</button>
+            <button data-filter="genai" class="project-filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all bg-slate-200 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-indigo-400">Generative AI</button>
+            <button data-filter="vision" class="project-filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all bg-slate-200 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-indigo-400">Computer Vision</button>
+            <button data-filter="mlops" class="project-filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all bg-slate-200 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-indigo-400">MLOps &amp; Data</button>
+          </div>
+        </div>
+
+        <!-- Projects Grid -->
+        <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          
+          <!-- Project 1 -->
+          <div class="project-item project-card flex flex-col rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300" data-category="genai">
+            <!-- Project Banner Mockup -->
+            <div class="h-48 bg-gradient-to-tr from-indigo-600 via-indigo-700 to-cyan-500 p-6 flex flex-col justify-between relative overflow-hidden group">
+              <div class="absolute -right-6 -bottom-6 w-32 h-32 bg-white/10 rounded-full blur-xl group-hover:scale-150 transition-transform duration-500"></div>
+              <span class="px-2.5 py-1 text-xs font-semibold rounded-full bg-white/20 text-white backdrop-blur-md self-start">Generative AI</span>
+              <div class="text-white">
+                <span class="text-xs uppercase tracking-wider font-semibold opacity-75">LLM &amp; Vector DB</span>
+                <h4 class="text-xl font-bold">Contextual RAG Assistant</h4>
+              </div>
+            </div>
+
+            <!-- Content -->
+            <div class="p-6 flex-grow flex flex-col justify-between space-y-4">
+              <div>
+                <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+                  Production-ready Retrieval-Augmented Generation (RAG) assistant for semantic search and document question-answering across custom enterprise knowledge bases.
+                </p>
+                <div class="flex flex-wrap gap-2 mt-4">
+                  <span class="text-xs px-2.5 py-1 rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 font-medium">Python</span>
+                  <span class="text-xs px-2.5 py-1 rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 font-medium">LangChain</span>
+                  <span class="text-xs px-2.5 py-1 rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 font-medium">FastAPI</span>
+                  <span class="text-xs px-2.5 py-1 rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 font-medium">ChromaDB</span>
+                </div>
+              </div>
+
+              <!-- Links -->
+              <div class="flex items-center gap-3 pt-3 border-t border-slate-100 dark:border-slate-800/80">
+                <a href="https://github.com/patilkunal2910" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-semibold text-indigo-600 dark:text-cyan-400 hover:underline">
+                  <span>View Source</span>
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+                </a>
+                <a href="https://github.com/patilkunal2910" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-semibold text-slate-500 hover:text-slate-900 dark:hover:text-white">
+                  <span>GitHub</span>
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="project-item project-card flex flex-col rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300" data-category="vision">
+            <!-- Project Banner Mockup -->
+            <div class="h-48 bg-gradient-to-tr from-cyan-600 to-emerald-500 p-6 flex flex-col justify-between relative overflow-hidden group">
+              <div class="absolute -right-6 -bottom-6 w-32 h-32 bg-white/10 rounded-full blur-xl group-hover:scale-150 transition-transform duration-500"></div>
+              <span class="px-2.5 py-1 text-xs font-semibold rounded-full bg-white/20 text-white backdrop-blur-md self-start">Computer Vision</span>
+              <div class="text-white">
+                <span class="text-xs uppercase tracking-wider font-semibold opacity-75">Object Detection &amp; Tracking</span>
+                <h4 class="text-xl font-bold">Real-Time Vision Engine</h4>
+              </div>
+            </div>
+
+            <!-- Content -->
+            <div class="p-6 flex-grow flex flex-col justify-between space-y-4">
+              <div>
+                <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+                  High-throughput computer vision pipeline utilizing YOLOv8 and OpenCV for real-time multi-class object detection, video stream tracking, and edge anomaly alerts.
+                </p>
+                <div class="flex flex-wrap gap-2 mt-4">
+                  <span class="text-xs px-2.5 py-1 rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 font-medium">PyTorch</span>
+                  <span class="text-xs px-2.5 py-1 rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 font-medium">YOLOv8</span>
+                  <span class="text-xs px-2.5 py-1 rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 font-medium">OpenCV</span>
+                  <span class="text-xs px-2.5 py-1 rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 font-medium">Flask</span>
+                </div>
+              </div>
+
+              <!-- Links -->
+              <div class="flex items-center gap-3 pt-3 border-t border-slate-100 dark:border-slate-800/80">
+                <a href="https://github.com/patilkunal2910" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-semibold text-indigo-600 dark:text-cyan-400 hover:underline">
+                  <span>View Source</span>
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+                </a>
+                <a href="https://github.com/patilkunal2910" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-semibold text-slate-500 hover:text-slate-900 dark:hover:text-white">
+                  <span>GitHub</span>
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div class="project-item project-card flex flex-col rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300" data-category="mlops">
+            <!-- Project Banner Mockup -->
+            <div class="h-48 bg-gradient-to-tr from-purple-600 to-indigo-600 p-6 flex flex-col justify-between relative overflow-hidden group">
+              <div class="absolute -right-6 -bottom-6 w-32 h-32 bg-white/10 rounded-full blur-xl group-hover:scale-150 transition-transform duration-500"></div>
+              <span class="px-2.5 py-1 text-xs font-semibold rounded-full bg-white/20 text-white backdrop-blur-md self-start">MLOps &amp; Data</span>
+              <div class="text-white">
+                <span class="text-xs uppercase tracking-wider font-semibold opacity-75">Predictive Pipeline</span>
+                <h4 class="text-xl font-bold">ML Analytics &amp; Tracking</h4>
+              </div>
+            </div>
+
+            <!-- Content -->
+            <div class="p-6 flex-grow flex flex-col justify-between space-y-4">
+              <div>
+                <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+                  End-to-end predictive machine learning platform featuring automated feature selection, hyperparameter tuning, experiment tracking with MLflow, and an interactive Streamlit UI.
+                </p>
+                <div class="flex flex-wrap gap-2 mt-4">
+                  <span class="text-xs px-2.5 py-1 rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 font-medium">Scikit-learn</span>
+                  <span class="text-xs px-2.5 py-1 rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 font-medium">MLflow</span>
+                  <span class="text-xs px-2.5 py-1 rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 font-medium">Docker</span>
+                  <span class="text-xs px-2.5 py-1 rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 font-medium">Streamlit</span>
+                </div>
+              </div>
+
+              <!-- Links -->
+              <div class="flex items-center gap-3 pt-3 border-t border-slate-100 dark:border-slate-800/80">
+                <a href="https://github.com/patilkunal2910" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-semibold text-indigo-600 dark:text-cyan-400 hover:underline">
+                  <span>View Source</span>
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+                </a>
+                <a href="https://github.com/patilkunal2910" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-semibold text-slate-500 hover:text-slate-900 dark:hover:text-white">
+                  <span>GitHub</span>
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience & Education Timeline -->
+    <section id="experience" class="py-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Section Header -->
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <h2 class="text-xs sm:text-sm font-bold tracking-widest uppercase text-indigo-600 dark:text-cyan-400">Career &amp; Growth</h2>
+          <p class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white mt-2">Work Experience &amp; Education</p>
+        </div>
+
+        <div class="max-w-3xl mx-auto space-y-8 relative before:absolute before:inset-0 before:left-8 md:before:left-1/2 before:w-0.5 before:-ml-px before:bg-slate-200 dark:before:bg-slate-800">
+          
+          <!-- Timeline Item 1 -->
+          <div class="relative flex items-center md:justify-between group">
+            <div class="flex items-center order-1 w-full md:w-[45%] md:text-right">
+              <div class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm w-full">
+                <span class="text-xs font-semibold px-2.5 py-1 rounded bg-indigo-50 dark:bg-indigo-950/70 text-indigo-600 dark:text-indigo-400">2024 - Present</span>
+                <h3 class="font-bold text-lg text-slate-900 dark:text-white mt-2">AIML Engineer &amp; Developer</h3>
+                <p class="text-xs text-slate-500 dark:text-slate-400 font-medium">Shirpur, Maharashtra, India</p>
+                <p class="text-sm text-slate-600 dark:text-slate-300 mt-2 leading-relaxed">
+                  Developing end-to-end Machine Learning pipelines, fine-tuning transformer models, and deploying containerized AI microservices with high inference throughput.
+                </p>
+              </div>
+            </div>
+            <!-- Center Circle -->
+            <div class="absolute left-8 md:left-1/2 -ml-3 w-6 h-6 rounded-full border-4 border-white dark:border-slate-950 bg-indigo-600 z-10"></div>
+          </div>
+
+          <!-- Timeline Item 2 -->
+          <div class="relative flex items-center md:justify-between group">
+            <div class="flex items-center order-1 md:order-2 w-full md:w-[45%] md:ml-auto">
+              <div class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm w-full">
+                <span class="text-xs font-semibold px-2.5 py-1 rounded bg-cyan-50 dark:bg-cyan-950/70 text-cyan-600 dark:text-cyan-400">2023 - 2024</span>
+                <h3 class="font-bold text-lg text-slate-900 dark:text-white mt-2">Deep Learning &amp; Vision Researcher</h3>
+                <p class="text-xs text-slate-500 dark:text-slate-400 font-medium">Shirpur, India</p>
+                <p class="text-sm text-slate-600 dark:text-slate-300 mt-2 leading-relaxed">
+                  Researched and trained real-time object detection models (YOLO, OpenCV), implemented feature extractors, and automated dataset preprocessing workflows.
+                </p>
+              </div>
+            </div>
+            <!-- Center Circle -->
+            <div class="absolute left-8 md:left-1/2 -ml-3 w-6 h-6 rounded-full border-4 border-white dark:border-slate-950 bg-cyan-500 z-10"></div>
+          </div>
+
+          <!-- Timeline Item 3 -->
+          <div class="relative flex items-center md:justify-between group">
+            <div class="flex items-center order-1 w-full md:w-[45%] md:text-right">
+              <div class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm w-full">
+                <span class="text-xs font-semibold px-2.5 py-1 rounded bg-purple-50 dark:bg-purple-950/70 text-purple-600 dark:text-purple-400">2020 - 2024</span>
+                <h3 class="font-bold text-lg text-slate-900 dark:text-white mt-2">B.Tech in Computer Engineering / AI</h3>
+                <p class="text-xs text-slate-500 dark:text-slate-400 font-medium">Shirpur, Maharashtra</p>
+                <p class="text-sm text-slate-600 dark:text-slate-300 mt-2 leading-relaxed">
+                  Comprehensive academic curriculum in Artificial Intelligence, Deep Neural Networks, Probability &amp; Statistics, Data Structures, and Software Architecture.
+                </p>
+              </div>
+            </div>
+            <!-- Center Circle -->
+            <div class="absolute left-8 md:left-1/2 -ml-3 w-6 h-6 rounded-full border-4 border-white dark:border-slate-950 bg-purple-600 z-10"></div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact & Message Section -->
+    <section id="contact" class="py-20 bg-white/50 dark:bg-slate-900/40 border-t border-slate-200/60 dark:border-slate-800/60">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <h2 class="text-xs sm:text-sm font-bold tracking-widest uppercase text-indigo-600 dark:text-cyan-400">Get In Touch</h2>
+          <p class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white mt-2">Let's discuss your next project</p>
+          <p class="text-slate-600 dark:text-slate-400 mt-3 text-sm sm:text-base">Whether you have an inquiry, project idea, or just want to connect, my inbox is always open.</p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+          
+          <!-- Contact Information & Details -->
+          <div class="lg:col-span-5 space-y-6">
+            <div class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm space-y-6">
+              
+              <!-- Email Card -->
+              <div class="flex items-start gap-4">
+                <div class="w-12 h-12 rounded-xl bg-indigo-50 dark:bg-indigo-950/60 text-indigo-600 dark:text-indigo-400 flex items-center justify-center flex-shrink-0">
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                </div>
+                <div>
+                  <h4 class="text-xs font-medium uppercase tracking-wider text-slate-500 dark:text-slate-400">Email</h4>
+                  <a href="mailto:patilkunal29107@gmail.com" class="text-base font-semibold text-slate-900 dark:text-white hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">patilkunal29107@gmail.com</a>
+                </div>
+              </div>
+
+              <!-- Location Card -->
+              <div class="flex items-start gap-4">
+                <div class="w-12 h-12 rounded-xl bg-cyan-50 dark:bg-cyan-950/60 text-cyan-600 dark:text-cyan-400 flex items-center justify-center flex-shrink-0">
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                </div>
+                <div>
+                  <h4 class="text-xs font-medium uppercase tracking-wider text-slate-500 dark:text-slate-400">Location</h4>
+                  <p class="text-base font-semibold text-slate-900 dark:text-white">Shirpur, Maharashtra, India</p>
+                </div>
+              </div>
+
+              <!-- Response Time Badge -->
+              <div class="flex items-start gap-4">
+                <div class="w-12 h-12 rounded-xl bg-emerald-50 dark:bg-emerald-950/60 text-emerald-600 dark:text-emerald-400 flex items-center justify-center flex-shrink-0">
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                </div>
+                <div>
+                  <h4 class="text-xs font-medium uppercase tracking-wider text-slate-500 dark:text-slate-400">Typical Response</h4>
+                  <p class="text-base font-semibold text-slate-900 dark:text-white">Within 24 Hours</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Contact Form -->
+          <div class="lg:col-span-7">
+            <form id="contact-form" class="p-6 sm:p-8 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm space-y-5">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                <div>
+                  <label for="name" class="block text-xs font-semibold text-slate-700 dark:text-slate-300 uppercase tracking-wider mb-2">Your Name</label>
+                  <input type="text" id="name" required placeholder="Your Name" class="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-800/50 text-slate-900 dark:text-white placeholder-slate-400 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-all">
+                </div>
+                <div>
+                  <label for="email" class="block text-xs font-semibold text-slate-700 dark:text-slate-300 uppercase tracking-wider mb-2">Your Email</label>
+                  <input type="email" id="email" required placeholder="john@example.com" class="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-800/50 text-slate-900 dark:text-white placeholder-slate-400 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-all">
+                </div>
+              </div>
+
+              <div>
+                <label for="subject" class="block text-xs font-semibold text-slate-700 dark:text-slate-300 uppercase tracking-wider mb-2">Subject</label>
+                <input type="text" id="subject" required placeholder="AIML Project / Collaboration Inquiry" class="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-800/50 text-slate-900 dark:text-white placeholder-slate-400 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-all">
+              </div>
+
+              <div>
+                <label for="message" class="block text-xs font-semibold text-slate-700 dark:text-slate-300 uppercase tracking-wider mb-2">Message</label>
+                <textarea id="message" rows="5" required placeholder="Tell me about your project, problem statement, or dataset..." class="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-800/50 text-slate-900 dark:text-white placeholder-slate-400 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-all"></textarea>
+              </div>
+
+              <button type="submit" class="w-full sm:w-auto px-8 py-3.5 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-semibold text-sm shadow-md shadow-indigo-600/20 transition-all hover:-translate-y-0.5 active:translate-y-0">
+                Send Message
+              </button>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="py-12 bg-white dark:bg-slate-950 border-t border-slate-200 dark:border-slate-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-6 text-sm text-slate-500 dark:text-slate-400">
+      <div class="flex items-center gap-2">
+        <span class="font-bold text-slate-900 dark:text-white">Kunal Kishor Patil</span>
+        <span>&bull;</span>
+        <span>&copy; <span id="current-year">2026</span> All rights reserved.</span>
+      </div>
+
+      <div class="flex items-center gap-6 text-xs sm:text-sm">
+        <a href="#hero" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Home</a>
+        <a href="#about" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">About</a>
+        <a href="#projects" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Projects</a>
+        <a href="#contact" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Toast Notification for Form Feedback -->
+  <div id="toast" class="fixed bottom-6 right-6 z-50 transform translate-y-24 opacity-0 transition-all duration-300 ease-out max-w-sm w-full pointer-events-none">
+    <div class="bg-slate-900 dark:bg-white text-white dark:text-slate-900 px-5 py-4 rounded-2xl shadow-2xl flex items-center gap-3 border border-slate-800 dark:border-slate-200">
+      <div class="w-8 h-8 rounded-full bg-emerald-500 text-white flex items-center justify-center flex-shrink-0">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+      </div>
+      <p id="toast-msg" class="text-xs sm:text-sm font-medium">Message sent successfully!</p>
+    </div>
+  </div>
+
+  <!-- Back to Top Button -->
+  <button id="back-to-top" aria-label="Back to top" class="fixed bottom-6 left-6 z-40 p-3 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300 shadow-lg hover:text-indigo-600 dark:hover:text-indigo-400 hover:scale-105 opacity-0 pointer-events-none transition-all duration-300">
+    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"/></svg>
+  </button>
+
+  <!-- Main JavaScript Logic -->
+  <script src="js/main.js"></script>
+</body>
+</html>
